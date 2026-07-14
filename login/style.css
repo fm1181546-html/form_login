@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('back.jpeg') no-repeat center center/cover;
+}
+
+/* WINDOW STYLE (seperti Mac) */
+.wrapper {
+    width: 420px;
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+}
+
+/* DOT WINDOW */
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: #ff5f56;
+    border-radius: 50%;
+    box-shadow:
+        20px 0 #ffbd2e,
+        40px 0 #27c93f;
+}
+
+/* TITLE */
+.wrapper h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/* INPUT BOX */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    outline: none;
+    padding: 0 45px 0 20px;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.input-box i {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+/* REMEMBER + FORGOT */
+.remember .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 30px auto;
+    align-items: center;
+}
+
+
+.btn:hover {
+    background: #e6e6e6;
+    transform: scale(1.02);
+}
+
+/* REGISTER */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* DASHBOARD STYLES */
+body.dashboard-page {
+    display: block;
+    padding: 50px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Dot effect for cards too */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background: #ff5f56;
+    /* Red like wrapper */
+    border-radius: 50%;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    /* Yellow & Green */
+}
+
+.card i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.card .value {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.logout-btn {
+    padding: 10px 25px;
+    background: #ff5f56;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 95, 86, 0.4);
+}
+
+.logout-btn:hover {
+    background: #ff4036;
+    transform: scale(1.05);
+}
