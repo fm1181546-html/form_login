@@ -1,10 +1,5 @@
 <?php
 session_start();
-// Uncomment the lines below if you want to enforce login (recommended)
-// if(!isset($_SESSION['username'])){
-//     header("Location: index_login.html");
-//     exit();
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +13,6 @@ session_start();
 <body class="dashboard-page">
 
     <div class="dashboard-container">
-        <!-- Header -->
         <header class="dashboard-header">
             <h2>Dashboard</h2>
             <div style="display: flex; align-items: center; gap: 20px;">
@@ -26,8 +20,6 @@ session_start();
                 <a href="logout.php" class="logout-btn">Logout</a>
             </div>
         </header>
-
-        <!-- Objects / Cards -->
         <div class="dashboard-grid">
             
             <div class="card">
